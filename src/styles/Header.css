@@ -13,3 +13,22 @@
     text-decoration: none;
     color: white;
 }
+
+/* mobile view */
+.mobile_navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile_navigation li {
+    margin-top: 20px;
+}
+
+.mobile_navigation li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
