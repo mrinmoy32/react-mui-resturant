@@ -28,7 +28,7 @@ const Footer = () => {
                 <YouTubeIcon />
             </Box>
             <Typography 
-            variant='h6'
+            variant='h7'
             sx={{"@media (max-width: 600px)": {
                 fontSize: "0.8rem",
 

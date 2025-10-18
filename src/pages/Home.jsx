@@ -1,9 +1,22 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
+import { Link } from 'react-router-dom'
+import Banner from '../images/banner.jpeg'
+import "../styles/Home.css"
 
 const Home = () => {
   return (
-    <Layout>Home</Layout>
+    <Layout>
+      <div className="home" style={{backgroundImage: `url(${Banner})`}}>
+        <div className="header_container">
+          <h1>Food Website</h1>
+          <p>Best Food in India</p>
+          <Link to="/menu">
+            <button>ORDER NOW</button>
+          </Link>
+        </div>
+      </div>
+    </Layout>
   )
 }
 
