@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from '@mui/material'
-import FastfoodIcon from '@mui/icons-material/Fastfood';
+import Logo from '../../images/logo.svg'
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import { NavLink,  } from 'react-router-dom';
 import "../../styles/Header.css"
 
 const Header = () => {
@@ -15,25 +15,26 @@ const Header = () => {
   //menu drawer
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', }}>
-      <Typography color={'goldenrod'} variant='h6' 
-      component='div' 
-      sx={{ flexGrow: 1, my: 2}}>
-        <FastfoodIcon />
-        My Resturant
+      <Typography color={'goldenrod'} variant='h6'
+        component='div'
+        sx={{ flexGrow: 1, my: 2 }}>
+        {/* <FastfoodIcon />
+        My Resturant */}
+        <img src={Logo} height={'50'} width={'200'} alt="logo" />
       </Typography>
       <Divider />
       <ul className="mobile_navigation">
         <li>
-          <Link to={'/'}>Home</Link>
+          <NavLink activeClassName="active" to={'/'}>Home</NavLink>
         </li>
         <li>
-          <Link to={'/about'}>About</Link>
+          <NavLink activeClassName="active" to={'/about'}>About</NavLink>
         </li>
         <li>
-          <Link to={'/contact'}>Contact</Link>
+          <NavLink activeClassName="active" to={'/contact'}>Contact</NavLink>
         </li>
         <li>
-          <Link to={'/menu'}>Menu</Link>
+          <NavLink activeClassName="active" to={'/menu'}>Menu</NavLink>
         </li>
       </ul>
     </Box>
@@ -54,22 +55,21 @@ const Header = () => {
           </IconButton>
 
           <Typography color={'goldenrod'} variant='h6' component='div' sx={{ flexGrow: 1 }}>
-            <FastfoodIcon />
-            My Resturant
+            <img src={Logo} height={'50'} width={'250'} alt="logo" />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <ul className="navigation_menu">
               <li>
-                <Link to={'/'}>Home</Link>
+                <NavLink activeClassName="active" to={'/'}>Home</NavLink>
               </li>
               <li>
-                <Link to={'/about'}>About</Link>
+                <NavLink activeClassName="active" to={'/about'}>About</NavLink>
               </li>
               <li>
-                <Link to={'/contact'}>Contact</Link>
+                <NavLink activeClassName="active" to={'/contact'}>Contact</NavLink>
               </li>
               <li>
-                <Link to={'/menu'}>Menu</Link>
+                <NavLink activeClassName="active" to={'/menu'}>Menu</NavLink>
               </li>
             </ul>
           </Box>
@@ -78,10 +78,12 @@ const Header = () => {
       <Box component="nav">
         <Drawer variant="temporary" open={mobileOpen}
           onClose={handleDrawerToggle}
-          sx={{ display: { xs: 'block', sm: 'none' }, "& .MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: "240px",
-          } }}
+          sx={{
+            display: { xs: 'block', sm: 'none' }, "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: "240px",
+            }
+          }}
         >
           {drawer}
         </Drawer>
