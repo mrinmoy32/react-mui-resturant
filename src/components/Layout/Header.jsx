@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from '@mui/material'
 import Logo from '../../images/logo.svg'
 import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink,  } from 'react-router-dom';
+import { NavLink, } from 'react-router-dom';
 import "../../styles/Header.css"
 
 const Header = () => {
@@ -54,7 +54,12 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
 
-          <Typography color={'goldenrod'} variant='h6' component='div' sx={{ flexGrow: 1 }}>
+          <Typography color={'goldenrod'} variant='h6' component='div' sx={{
+            flexGrow: 1,
+            display: 'flex',
+            alignItems: 'center'
+          }}
+          >
             <img src={Logo} height={'50'} width={'250'} alt="logo" />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
