@@ -6,9 +6,9 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@
 const Menu = () => {
   return (
     <Layout>
-      <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+      <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', my:1.5}}>
         {MenuList.map(menu => (
-          <Card sx={{maxWidth: "370px", m:2}}>
+          <Card sx={{maxWidth: "370px", m:1.5}}>
             <CardActionArea>
               <CardMedia sx={{minHeight: '400px'}} component='img' src={menu.image} alt={menu.name}/>
               <CardContent>
