@@ -3,7 +3,7 @@ import Chhola from '../images/chhola.jpg'
 import Idli from '../images/idli.jpg'
 import MasalaDosa from '../images/masala.jpg'
 import Paneer from '../images/paneer.jpg'
-import Gujarati from '../images/gujarati.jpeg'
+import Gujarati from '../images/gujrati.jpeg'
 
 export const MenuList = [
     {
